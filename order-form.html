@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleform.css">
+    <title>Order Form</title>
+    <style>
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            z-index: 1000;
+        }
+
+        .popup p {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Order Details</h1>
+        <form id="order-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="item">Item:</label>
+            <input type="text" id="item" name="item" readonly>
+            
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" required min="1">
+            
+            <button type="submit">Submit Order</button>
+            <button type="button" onclick="window.location.href='order.html'">Continue Adding Items</button>
+        </form>
+    </div>
+
+    <!-- Popup message -->
+    <div id="popup" class="popup">
+        <p>We have received your order and we are working on it!</p>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const item = urlParams.get('item');
+            if (item) {
+                document.getElementById('item').value = item;
+            }
+
+            
+            const form = document.getElementById('order-form');
+            form.onsubmit = function(event) {
+                event.preventDefault(); 
+
+                
+                const popup = document.getElementById('popup');
+                popup.style.display = 'block';
+
+                
+                setTimeout(function() {
+                    window.location.href = 'order.html';
+                }, 2000); 
+            };
+        });
+    </script>
+</body>
+</html>

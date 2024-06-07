@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Order Menu</title>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const item = urlParams.get('item');
+                if (item) {
+                    document.getElementById('item').value = item;
+                }
+            });
+        </script>
+        
+    </head>
+    <body>
+        
+        <div class="menu">
+            <div class="heading">
+                <h1>Restaurant Food</h1>
+                <h3>&mdash;Menu&mdash;</h3>
+            </div>
+            <div class="food-items">
+                <img src="./Images/Couscous.jpg" alt="Couscous">
+                <div class="details">
+                    <div class="sub-details">
+                        <h5>Couscous</h5>
+                        <h5 class="price">£12.00</h5>
+                    </div>
+                    <p>'North African'</p>
+                    <button onclick="location.href='order-form.html?item=Couscous'">Order Now</button>
+                </div>
+            </div>
+            <div class="food-items">
+                <img src="./Images/tacos.jpeg" alt="tacos">
+                <div class="details">
+                    <div class="sub-details">
+                        <h5>Tacos</h5>
+                        <h5 class="price">£6.00</h5>
+                    </div>
+                    <p>'Mexican'</p>
+                    <button onclick="location.href='order-form.html?item=Couscous'">Order Now</button>
+                </div>
+            </div>
+            <div class="food-items">
+                <img src="./Images/sushi.webp" alt="sushi">
+                <div class="details">
+                    <div class="sub-details">
+                        <h5>Sushi</h5>
+                        <h5 class="price">£6.00</h5>
+                    </div>
+                    <p>'Asia'</p>
+                    <button onclick="location.href='order-form.html?item=Couscous'">Order Now</button>
+                </div>
+            </div>
+            <div class="food-items">
+                <img src="./Images/chicken kabab.jpg" alt="Chicken kebab">
+                <div class="details">
+                    <div class="sub-details">
+                        <h5>Chicken kebab</h5>
+                        <h5 class="price">£18.00</h5>
+                    </div>
+                    <p>'Middle Eastern'</p>
+                    <button onclick="location.href='order-form.html?item=Couscous'">Order Now</button>
+                </div>
+            </div>
+            <div class="food-items">
+                <img src="./Images/shakshuka.jpeg" alt="shakshuka">
+                <div class="details">
+                    <div class="sub-details">
+                        <h5>Shakshuka</h5>
+                        <h5 class="price">£10.00</h5>
+                    </div>
+                    <p>'North African'</p>
+                    <button onclick="location.href='order-form.html?item=Couscous'">Order Now</button>
+                </div>
+            </div>
+            <div class="food-items">
+                <img src="./Images/chicken tajine.jpg" alt="Chicken tajine">
+                <div class="details">
+                    <div class="sub-details">
+                        <h5>Chicken tajine</h5>
+                        <h5 class="price">£18.00</h5>
+                    </div>
+                    <p>'North African'</p>
+                    <button onclick="location.href='order-form.html?item=Couscous'">Order Now</button>
+                </div>
+            </div>
+            <div class="food-items">
+                <img src="./Images/Brik.jpeg" alt="Brik">
+                <div class="details">
+                    <div class="sub-details">
+                        <h5>Brik</h5>
+                        <h5 class="price">£9.00</h5>
+                    </div>
+                    <p>'North African'</p>
+                    <button onclick="location.href='order-form.html?item=Couscous'">Order Now</button>
+                </div>
+            </div>
+            <div class="food-items">
+                <img src="./Images/dolmas.jpg" alt="Dolmas">
+                <div class="details">
+                    <div class="sub-details">
+                        <h5>Dolmas</h5>
+                        <h5 class="price">£8.00</h5>
+                    </div>
+                    <p>'North African'</p>
+                    <button onclick="location.href='order-form.html?item=Couscous'">Order Now</button>
+                </div>
+            </div>
+            <div class="food-items">
+                <img src="./Images/quesadillas.jpeg" alt="quesadillas">
+                <div class="details">
+                    <div class="sub-details">
+                        <h5>Quesadillas</h5>
+                        <h5 class="price">£7.00</h5>
+                    </div>
+                    <p>'Mexican'</p>
+                    <button onclick="location.href='order-form.html?item=Couscous'">Order Now</button>
+                </div>
+            </div>
+            <div class="food-items">
+                <img src="./Images/chicken beryani.jpg" alt="Chicken Biryani">
+                <div class="details">
+                    <div class="sub-details">
+                        <h5>Chicken Biryani</h5>
+                        <h5 class="price">£15.00</h5>
+                    </div>
+                    <p>'North African'</p>
+                    <button onclick="location.href='order-form.html?item=Couscous'">Order Now</button>
+                </div>
+            </div>
+            <div class="food-items">
+                <img src="./Images/Pho.avif" alt="Pho">
+                <div class="details">
+                    <div class="sub-details">
+                        <h5>Pho</h5>
+                        <h5 class="price">£10.00</h5>
+                    </div>
+                    <p>'Asian'</p>
+                    <button onclick="location.href='order-form.html?item=Couscous'">Order Now</button>
+                </div>
+            </div>
+            <div class="food-items">
+                <img src="./Images/huaraches.jpg" alt="huaraches">
+                <div class="details">
+                    <div class="sub-details">
+                        <h5>Huaraches</h5>
+                        <h5 class="price">£9.00</h5>
+                    </div>
+                    <p>'Mexican'</p>
+                    <button onclick="location.href='order-form.html?item=Couscous'">Order Now</button>
+                </div>
+            </div>
+            <div class="food-items">
+                <img src="./Images/Shawarma.webp" alt="shawarma">
+                <div class="details">
+                    <div class="sub-details">
+                        <h5>Shawarma</h5>
+                        <h5 class="price">£9.00</h5>
+                    </div>
+                    <p>'Middle Eastern'</p>
+                    <button onclick="location.href='order-form.html?item=Couscous'">Order Now</button>
+                </div>
+            </div>
+            <div class="food-items">
+                <img src="./Images/fanta.png" alt="Fanta">
+                <div class="details">
+                    <div class="sub-details">
+                        <h5>Fanta</h5>
+                        <h5 class="price">£2.50</h5>
+                    </div>
+                    <p>'Drinks'</p>
+                    <button onclick="location.href='order-form.html?item=Couscous'">Order Now</button>
+                </div>
+            </div>
+            <div class="food-items">
+                <img src="./Images/Sprite.webp" alt="Sprite">
+                <div class="details">
+                    <div class="sub-details">
+                        <h5>Sprite</h5>
+                        <h5 class="price">£2.50</h5>
+                    </div>
+                    <p>'Drinks'</p>
+                    <button onclick="location.href='order-form.html?item=Couscous'">Order Now</button>
+                </div>
+            </div>
+            <div class="food-items">
+                <img src="./Images/Pepsi.png" alt="Pepsi">
+                <div class="details">
+                    <div class="sub-details">
+                        <h5>Pepsi</h5>
+                        <h5 class="price">£2.50</h5>
+                    </div>
+                    <p>'Drinks'</p>
+                    <button onclick="location.href='order-form.html?item=Couscous'">Order Now</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+

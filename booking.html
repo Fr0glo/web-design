@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Table Booking</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Book a Table</h1>
+        <div class="table-grid">
+            <div class="table" data-table="1"></div>
+            <div class="table" data-table="2"></div>
+            <div class="table" data-table="3"></div>
+            <div class="table" data-table="4"></div>
+            <div class="table" data-table="5"></div>
+            <div class="table" data-table="6"></div>
+            <div class="table" data-table="7"></div>
+            <div class="table" data-table="8"></div>
+            <div class="table" data-table="9"></div>
+            <div class="table" data-table="10"></div>
+        </div>
+
+        <div class="form-container" id="form-container">
+            <h2>Table <span id="selected-table">1</span></h2>
+            <form id="booking-form" action="submit-booking.php" method="post">
+                <input type="hidden" name="table" id="table-input">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+                
+                <button type="submit">Book Table</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="popup" class="popup">
+        <p>Your table has been booked!</p>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const tables = document.querySelectorAll('.table');
+            const formContainer = document.getElementById('form-container');
+            const tableInput = document.getElementById('table-input');
+            const selectedTableSpan = document.getElementById('selected-table');
+            const bookingForm = document.getElementById('booking-form');
+            const popup = document.getElementById('popup');
+
+            tables.forEach(table => {
+                table.addEventListener('click', () => {
+                    tables.forEach(t => t.classList.remove('selected'));
+                    table.classList.add('selected');    
+                    const tableNumber = table.getAttribute('data-table');
+                    selectedTableSpan.textContent = tableNumber;
+                    tableInput.value = tableNumber;
+                    formContainer.classList.add('active');
+                });
+            });
+
+            bookingForm.onsubmit = function(event) {
+                event.preventDefault(); 
+
+                
+                popup.style.display = 'block';
+
+                
+                setTimeout(function() {
+                    popup.style.display = 'none';
+                    window.location.href = '../index.html';
+                }, 2000); 
+            };
+        });
+    </script>
+</body>
+</html>
